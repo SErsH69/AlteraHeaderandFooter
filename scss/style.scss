@@ -1,0 +1,98 @@
+body {
+	box-sizing: border-box; 
+	margin: 0;
+}
+*, ::after, ::before {
+	box-sizing: inherit;
+	outline: none;
+	scroll-behavior: smooth; 
+}
+.center_block {
+	max-width: 1200px;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 15px;
+	padding-right: 15px; 
+}
+img {
+	max-width: 100%;
+	height: auto; 
+}
+textarea {
+	resize: none; 
+}
+// header
+
+// header end
+// footer
+.footer {
+    background: #005D88;
+    margin-top: 115px;
+    @media all and (max-width: 1023px) {
+        margin-top: 80px;
+    }
+    &__in {
+        justify-content: space-between;
+        display: flex;
+        @media all and (max-width: 1023px) {
+            flex-direction: column;
+        }
+    }
+    &__top {
+        padding-top: 60px;
+        padding-bottom: 40px;
+        @media all and (max-width: 1023px) {
+            padding-top: 40px;
+        }
+    }
+    &__l-side {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    &__bottom {
+        background: #004666;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        @media all and (max-width: 1023px) {
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+        .footer__in {
+            align-items: center;
+            @media all and (max-width: 1023px) {
+                align-items: flex-start;
+            }
+        }
+    }
+    &__link {
+        font-family: 'Ubuntu', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        color: #FFFFFF;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+        @media all and (max-width: 1023px) {
+            margin-bottom: 20px;
+        }
+    }
+    &__pays {
+        display: flex;
+        align-items: center;
+    }
+    &__pay {
+        margin-left: 30px;
+        max-width: 70px;
+        width: 100%;
+        text-align: center;
+        @media all and (max-width: 1023px) {
+            margin-left: 0;
+            margin-right: 19px;
+        }
+    }
+}
+// footer end
