@@ -640,6 +640,8 @@ textarea {
   transform: translateY(-100%); }
   .slide_menu.isOpened {
     transform: translateY(0); }
+  .slide_menu .waSlideMenu-nav {
+    overflow: unset; }
   .slide_menu .waSlideMenu-menu {
     padding: 30px 15px; }
     .slide_menu .waSlideMenu-menu a {

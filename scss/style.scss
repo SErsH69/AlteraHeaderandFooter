@@ -761,6 +761,9 @@ textarea {
     &.isOpened { 
         transform: translateY(0);
     }
+    .waSlideMenu-nav {
+        overflow: unset;
+    }
     .waSlideMenu-menu {
         padding: 30px 15px;
         a {
