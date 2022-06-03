@@ -897,6 +897,7 @@ textarea {
     &__rev {
         max-width: 180px;
         width: 100%;
+        display: block;
         &:not(:last-child) {
             margin-bottom: 20px;
         }

@@ -45,7 +45,18 @@ $(function(){
     }
   })
 });
+
 $(document).ready(function(){
+  if (window.innerWidth > 1023) {
+    $('#menu-main_cat-1 ul.sub-menu').each(function() {
+        let link = $(this).siblings('a').clone();
+        let li = $('<li></li>').prepend(link).clone();
+        console.log(li, window.innerWidth);
+        $(this).prepend(li);
+    })
+  } else {
+    $('#menu-main_cat > li.menu-item').first().remove();
+  }
     $('.burger-body__cat').on('click', function() {
         $('.slide_menu').addClass('isOpened');
     })
@@ -61,6 +72,18 @@ $(document).ready(function(){
                 let link = $(this).siblings('a').clone();
                 $(this).children('.waSlideMenu-back').append(link).clone();
             })
+            $('.waSlideMenu-nav li:not(.menu-item-has-children, .waSlideMenu-back) > a').click(function() {
+              console.log('asdasdasdasd');
+              document.location.href = $(this).attr('href');
+            })
+            $('.waSlideMenu-nav li.menu-item-has-children > a').click(function(event) {
+              event.preventDefault();
+              console.log('.waSlideMenu-nav li.menu-item-has-children > a');
+            })
+            $('.waSlideMenu-back > a:first-child').click(function(event) {
+              event.preventDefault();
+              console.log('.waSlideMenu-back > a:first-child');
+            });
         }
     });
  });

@@ -753,7 +753,8 @@ textarea {
     color: #FFFFFF; }
   .footer__rev {
     max-width: 180px;
-    width: 100%; }
+    width: 100%;
+    display: block; }
     .footer__rev:not(:last-child) {
       margin-bottom: 20px; }
   .footer__menu {
