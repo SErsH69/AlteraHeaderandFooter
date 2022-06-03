@@ -33,11 +33,11 @@ $(function(){
     $(this).parent().find('.popups').toggleClass('isActive');
   });
 
-  $('.site-panel-wrap .burger-wrap .burger-body__menu ul li.menu-item-has-children').on('click', function(e) {
+  $('.site-panel-wrap .burger-wrap .burger-body__menu ul#menu-glavnoe-menyu-novoe li.menu-item-has-children').on('click', function(e) {
     $(this).toggleClass('active');
     $(this).find('> a').toggleClass('active');
   })
-  $('.site-panel-wrap .burger-wrap .burger-body__menu ul li.menu-item-has-children').on('click', '> a', function(e) {
+  $('.site-panel-wrap .burger-wrap .burger-body__menu ul#menu-glavnoe-menyu-novoe li.menu-item-has-children').on('click', '> a', function(e) {
     if($(this).hasClass('active')) {
       e.stopPropagation();
     } else {
