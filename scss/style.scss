@@ -898,6 +898,7 @@ textarea {
         max-width: 180px;
         width: 100%;
         display: block;
+        font-size: 0;
         &:not(:last-child) {
             margin-bottom: 20px;
         }

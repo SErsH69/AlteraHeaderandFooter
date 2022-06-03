@@ -754,7 +754,8 @@ textarea {
   .footer__rev {
     max-width: 180px;
     width: 100%;
-    display: block; }
+    display: block;
+    font-size: 0; }
     .footer__rev:not(:last-child) {
       margin-bottom: 20px; }
   .footer__menu {
