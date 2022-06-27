@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   box-sizing: border-box;
   margin: 0; }
@@ -864,3 +865,152 @@ textarea {
       .footer__pay {
         margin-left: 0;
         margin-right: 19px; } }
+
+.form-wrapper {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.4s ease;
+  padding: 15px;
+  /* стили для чекбокса, находящегося в состоянии disabled */ }
+  .form-wrapper.opened {
+    opacity: 1;
+    visibility: visible; }
+  .form-wrapper .form-wrapper-inner {
+    max-width: 570px;
+    width: 100%;
+    border-radius: 10px;
+    overflow: auto;
+    background: #fff;
+    position: relative; }
+  .form-wrapper .icon-close {
+    position: absolute;
+    z-index: 2;
+    background: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.290314 1.69208C-0.0967712 1.30499 -0.0967714 0.6774 0.290314 0.290315C0.6774 -0.0967707 1.30499 -0.0967707 1.69208 0.290315L15.7097 14.3079C16.0968 14.695 16.0968 15.3226 15.7097 15.7097C15.3226 16.0968 14.695 16.0968 14.3079 15.7097L0.290314 1.69208Z' fill='white'/%3E%3Cpath d='M1.69208 15.7097C1.30499 16.0968 0.6774 16.0968 0.290314 15.7097C-0.0967714 15.3226 -0.0967714 14.695 0.290314 14.3079L14.3079 0.290314C14.695 -0.0967714 15.3226 -0.0967714 15.7097 0.290314C16.0968 0.6774 16.0968 1.30499 15.7097 1.69208L1.69208 15.7097Z' fill='white'/%3E%3C/svg%3E%0A") 50% no-repeat;
+    top: 20px;
+    right: 20px;
+    width: 16px;
+    cursor: pointer;
+    height: 16px; }
+  .form-wrapper__top {
+    height: 220px;
+    position: relative;
+    padding: 40px 47px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; }
+    @media all and (max-width: 1023px) {
+      .form-wrapper__top {
+        padding: 30px 20px; } }
+  .form-wrapper__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%; }
+    .form-wrapper__img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; }
+  .form-wrapper__title {
+    position: relative;
+    z-index: 2;
+    font-family: 'Poiret One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    color: #FFFFFF; }
+    @media all and (max-width: 1023px) {
+      .form-wrapper__title {
+        font-size: 28px; } }
+  .form-wrapper__form {
+    padding: 40px 47px;
+    display: flex;
+    flex-direction: column; }
+    @media all and (max-width: 1023px) {
+      .form-wrapper__form {
+        padding: 30px 20px; } }
+    .form-wrapper__form input[type="text"], .form-wrapper__form input[type="tel"], .form-wrapper__form input[type="email"], .form-wrapper__form input textarea {
+      margin-bottom: 30px;
+      height: 36px;
+      border: 0;
+      border-radius: 0;
+      border-bottom: 2px solid #CCCCCC;
+      padding: 10px 28px;
+      font-family: 'Ubuntu';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      color: #000; }
+      .form-wrapper__form input[type="text"]::placeholder, .form-wrapper__form input[type="tel"]::placeholder, .form-wrapper__form input[type="email"]::placeholder, .form-wrapper__form input textarea::placeholder {
+        color: #CCCCCC; }
+    .form-wrapper__form button {
+      border: 0;
+      font-family: 'Ubuntu';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 18px;
+      text-align: center;
+      color: #FFFFFF;
+      padding: 20px;
+      background: #FF8006;
+      border-radius: 500px;
+      cursor: pointer;
+      transition: all .3s ease-out; }
+      .form-wrapper__form button:hover {
+        background: #0095D9; }
+  .form-wrapper .checkbox {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    cursor: pointer; }
+    .form-wrapper .checkbox label {
+      display: block;
+      font-family: 'Ubuntu';
+      font-style: normal;
+      font-weight: 400;
+      margin-bottom: 30px;
+      font-size: 14px;
+      line-height: 140%;
+      color: #000000;
+      padding-left: 30px; }
+      .form-wrapper .checkbox label a {
+        color: #0095D9; }
+  .form-wrapper .custom-checkbox {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    padding-left: 30px; }
+  .form-wrapper .custom-checkbox + label::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 20px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    background: #CCCCCC;
+    border-radius: 3px;
+    background-repeat: no-repeat;
+    background-position: center center; }
+  .form-wrapper .custom-checkbox:checked + label::before {
+    background-color: #0095D9;
+    background-image: url("data:image/svg+xml,%3Csvg width='14' height='11' viewBox='0 0 14 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 5.26667L4.81818 9L13 1' stroke='white' stroke-width='2'/%3E%3C/svg%3E%0A"); }
+  .form-wrapper .custom-checkbox:disabled + label::before {
+    background-color: #e9ecef; }
